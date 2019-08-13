@@ -1,0 +1,11 @@
+//  Outputs a colour hex from the $palettes source map
+//
+//  $space - Name of the particular size of space we're looking for
+//  $base  - The base size for em conversion (defaults to 16px)
+//
+//  Compatible with all browsers
+
+    @function space($space: 'base', $base: $size-copy) {
+        $result: map-get($spaces, $space);
+        @return em($result, $base);
+    }

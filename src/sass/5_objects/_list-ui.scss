@@ -1,0 +1,126 @@
+//  UI list
+//
+//  Returns a list as a sequence of inline-block elements with a keyline between
+//
+//  Styleguide: Objects.Inline-List
+
+
+    %o-list--ui,
+    .o-list--ui {
+        @include cf;
+        list-style: none;
+        margin: 0 em(-$base-space * 0.5);
+        padding: 0;
+
+        > li {
+            position: relative;
+            display: inline-block;
+            padding: 0 space(half);
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 25%;
+                right: -1px;
+                width: 1px;
+                height: 55%;
+                background-color: $color-subtext;
+            }
+
+            &:last-child::after {
+                display: none;
+            }
+
+        }
+    }
+
+    // .two-up.o-list--ui > li:nth-child(2n+2)::after,
+    // .three-up.o-list--ui > li:nth-child(3n+3)::after,
+    // .four-up.o-list--ui > li:nth-child(4n+4)::after {
+    //     display: none;
+    // }
+
+    // @include breakpoint($bp-xs) {
+    //     .xs-two-up.o-list--ui,
+    //     .xs-three-up.o-list--ui,
+    //     .xs-four-up.o-list--ui {
+    //         > li:not(:last-child)::after {
+    //             display: block;
+    //         }
+    //     }
+
+    //     .xs-two-up.o-list--ui > li:nth-child(2n+2)::after,
+    //     .xs-three-up.o-list--ui > li:nth-child(3n+3)::after,
+    //     .xs-four-up.o-list--ui > li:nth-child(4n+4)::after {
+    //         display: none;
+    //     }
+    // }
+
+    // @include breakpoint($bp-sm) {
+    //     .sm-two-up.o-list--ui,
+    //     .sm-three-up.o-list--ui,
+    //     .sm-four-up.o-list--ui {
+    //         > li:not(:last-child)::after {
+    //             display: block;
+    //         }
+    //     }
+
+    //     .sm-two-up.o-list--ui > li:nth-child(2n+2)::after,
+    //     .sm-three-up.o-list--ui > li:nth-child(3n+3)::after,
+    //     .sm-four-up.o-list--ui > li:nth-child(4n+4)::after {
+    //         display: none;
+    //     }
+    // }
+
+    // @include breakpoint($bp-md) {
+    //     .md-two-up.o-list--ui,
+    //     .md-three-up.o-list--ui,
+    //     .md-four-up.o-list--ui {
+    //         > li:not(:last-child)::after {
+    //             display: block;
+    //         }
+    //     }
+
+    //     .md-two-up.o-list--ui > li:nth-child(2n+2)::after,
+    //     .md-three-up.o-list--ui > li:nth-child(3n+3)::after,
+    //     .md-four-up.o-list--ui > li:nth-child(4n+4)::after {
+    //         display: none;
+    //     }
+    // }
+
+    // @include breakpoint($bp-lg) {
+    //     .lg-two-up.o-list--ui,
+    //     .lg-three-up.o-list--ui,
+    //     .lg-four-up.o-list--ui {
+    //         > li:not(:last-child)::after {
+    //             display: block;
+    //         }
+    //     }
+
+    //     .lg-two-up.o-list--ui > li:nth-child(2n+2)::after,
+    //     .lg-three-up.o-list--ui > li:nth-child(3n+3)::after,
+    //     .lg-four-up.o-list--ui > li:nth-child(4n+4)::after {
+    //         display: none;
+    //     }
+    // }
+
+    // @include breakpoint($bp-xl) {
+    //     .xl-two-up.o-list--ui,
+    //     .xl-three-up.o-list--ui,
+    //     .xl-four-up.o-list--ui {
+    //         > li:not(:last-child)::after {
+    //             display: block;
+    //         }
+    //     }
+
+    //     .xl-two-up.o-list--ui > li:nth-child(2n+2)::after,
+    //     .xl-three-up.o-list--ui > li:nth-child(3n+3)::after,
+    //     .xl-four-up.o-list--ui > li:nth-child(4n+4)::after {
+    //         display: none;
+    //     }
+    // }
+
+    // .o-list--ui > li:last-child::after {
+    //     display: none;
+    // }

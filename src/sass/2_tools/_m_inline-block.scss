@@ -1,0 +1,12 @@
+//  A mixin to set elements to be inline block, with IE7 fallback
+//
+//  $value - The pixel value to convert
+//  $base  - The base size to convert against (defaults to 16px)
+//
+//  Compatible with all modern browsers
+
+    @mixin ib {
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+    }

@@ -1,0 +1,51 @@
+//  Nav
+//
+//  Turns ul and ols into horizontal mode, for use in navs, breadcrumbs, etc.
+//
+//  Markup:
+//  <ul class="o-nav">
+//      <li class="o-nav__item"><a class="o-nav__link" href=#>Home</a></li>
+//      <li class="o-nav__item"><a class="o-nav__link" href=#>About</a></li>
+//      <li class="o-nav__item"><a class="o-nav__link" href=#>Portfolio</a></li>
+//      <li class="o-nav__item"><a class="o-nav__link" href=#>Contact</a></li>
+//  </ul>
+//
+//  Styleguide: Objects.Nav.Default
+
+    .o-nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+        .o-nav__item,
+        .o-nav__link {
+            @include ib;
+        }
+
+
+//  Vertical nav
+//
+//  For vertical navs, we can extend .o-nav  with .o-nav--stacked
+//
+//  Markup:
+//  <ul class="o-nav  o-nav--stacked">
+//      <li class="o-nav__item"><a class="o-nav__link" href=#>Home</a></li>
+//      <li class="o-nav__item"><a class="o-nav__link" href=#>About</a></li>
+//      <li class="o-nav__item"><a class="o-nav__link" href=#>Portfolio</a></li>
+//      <li class="o-nav__item"><a class="o-nav__link" href=#>Contact</a></li>
+//  </ul>
+//
+//  Styleguide: Objects.Nav.Stacked
+
+    // .o-nav--stacked {
+    //     width: 100%;
+
+    //     > .o-nav__item {
+    //         display: list-item;
+
+    //         > .o-nav__link {
+    //             display: block;
+    //         }
+    //     }
+    // }

@@ -1,0 +1,15 @@
+//  Inline list
+//
+//  Returns a list as a sequence of inline elements.
+//
+//  Styleguide: Objects.Inline-List
+
+    .o-list--inline {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        > li {
+            display: inline-block;
+        }
+    }

@@ -1,0 +1,35 @@
+//  Experience
+
+    .experience {
+        padding: var(--space-landmark) 0;
+
+        .section__content {
+            grid-column: sidebar-start / sidebar-end;
+            padding: 0;
+            align-self: center;
+
+            > *:last-child {
+                margin: 0;
+            }
+        }
+    }
+    
+
+    .experience__clients {
+        grid-column: main-start / main-end;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: var(--space);
+        padding: 0 var(--space);
+
+        > li {
+
+        }
+
+        > li > span {
+            background-color: var(--color-pink);
+            border: 0.25rem solid var(--color-pink);
+            border-width: 0.25rem 0.5rem;
+            color: var(--color-body);
+        }
+    }

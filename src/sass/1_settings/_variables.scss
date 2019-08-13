@@ -1,0 +1,57 @@
+// ----------------------------------------------------------------------------
+//  Variables 
+// ----------------------------------------------------------------------------
+
+    :root {
+    //  Font families
+        --copy-font:                aktiv-grotesk, Helvetica, Arial, sans-serif;
+        --heading-font:             aktiv-grotesk, Helvetica, Arial, sans-serif;
+        --code-font:                "IBM Plex Mono", Consolas, Monaco, mono;
+
+    //  Font sizes
+        --size-copy-x-small:        16px;
+        --size-copy-small:          18px;
+        --size-copy-base:           20px;
+        --size-copy-large:          22px;
+        --size-copy-x-large:        26px;
+
+    //  Font weights
+        --weight-normal:            400;
+        --weight-bold:              700;
+
+    //  Heading sizes
+        --size-h6:                  18px;
+        --size-h5:                  20px;
+        --size-h4:                  24px;
+        --size-h3:                  28px;
+        --size-h2:                  36px;
+        --size-h1:                  48px;
+
+    //  Line heights
+        --line-height-tight:        1.4;
+        --line-height-base:         1.75;
+        --line-height-loose:        2;
+
+    //  Spaces
+        --max-content-width:        1080px;
+        --space-quarter:            0.25rem;
+        --space-half:               0.5rem;
+        --space-threequarter:       0.75rem;
+        --space:                    1rem;
+        --space-mid:                1.5rem;
+        --space-double:             2rem;
+        --space-landmark:           3rem;
+
+    }
+
+//  Breakpoints
+// ----------------------------------------------------------------------------
+
+//  Values to pass to mq-sass for use in media queries.
+
+    $mq-breakpoints: (
+        mobile:                     320px,
+        tablet:                     740px,
+        desktop:                    980px,
+        wide:                       1300px
+    );

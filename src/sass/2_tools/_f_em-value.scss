@@ -1,0 +1,11 @@
+//  Takes a pixel value and converts it to ems
+//
+//  $value - The pixel value to convert
+//  $base  - The base size to convert against (defaults to 16px)
+//
+//  Compatible with all modern browsers
+
+    @function em($value, $base: $size-copy) {
+        $em-value: ($value / $base) * 1em;
+        @return $em-value;
+    }

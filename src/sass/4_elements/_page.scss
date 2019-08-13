@@ -1,0 +1,12 @@
+// Page
+//
+// Page level styling, e.g. HTML and Body elements
+
+    html {
+        font-family: var(--copy-font);
+        font-size: var(--size-copy-base);
+        font-weight: var(--weight-normal);
+        line-height: var(--line-height-base);
+        background-color: var(--color-body);
+        color: var(--color-text);
+    }

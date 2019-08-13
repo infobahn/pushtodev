@@ -1,0 +1,16 @@
+//  Block list
+//
+//  Returns a list as a sequence of block elements. Can be combined with the
+//  widths helper classes to create a set of equally spaced elements.
+//
+//  Styleguide: Objects.Block-List
+
+    .o-list--block {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        > li:last-child {
+            margin-bottom: 0;
+        }
+    }

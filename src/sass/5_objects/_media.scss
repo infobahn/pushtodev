@@ -1,0 +1,44 @@
+// =============================================================================
+//  Media
+// =============================================================================
+
+//  Places image and content alongside each other. E.g.:
+//
+//  Markup:
+//  <div class="o-media">
+//     <img src="http://placekitten.com/200/300" alt="" class="o-media__img">
+//     <p class="o-media__bd">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+//     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+//  </div>
+//
+//  Styleguide: Objects.Media
+
+    .o-media {
+        display: flex;
+        align-items: center;
+    }
+
+        .o-media__img {
+            margin-right: space(half);
+        }
+
+    //  Reversed image location (right instead of left).
+        .o-media__img--rev {
+            order: 2;
+            margin-right: 0;
+            margin-left: space(half);
+        }
+
+            .o-media__img img,
+            .o-media__img--rev img {
+                display: block;
+            }
+
+        .o-media__bd {
+            flex: 1;
+        }
+
+            // .o-media__bd,
+            // .o-media__bd > :last-child {
+            //     margin-bottom: 1px; // Prevent bottom border being cut off in some scenarios
+            // }

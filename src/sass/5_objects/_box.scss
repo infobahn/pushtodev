@@ -1,0 +1,37 @@
+//  Box
+//
+//  Basic box for grouping content. Has required body element and optional
+//  header and footer.
+//
+//  Markup:
+//  <div class="o-box">
+//      <div class="o-box__hd">Header content</div>
+//      <div class="o-box__bd">Main box content content</div>
+//      <div class="o-box__ft">Footer content</div>
+//  </div>
+//
+//  Styleguide: Objects.Box
+
+    .o-box {
+        @include cf;
+        position: relative;
+        clear: both;
+    }
+
+        .o-box__hd,
+        .o-box__bd,
+        .o-box__ft {
+            @include cf;
+
+            .o-box--flush & {
+                padding: 0;
+            }
+
+            > :first-child {
+                margin-top: 0;
+            }
+
+            > :last-child {
+                margin-bottom: 0;
+            }
+        }

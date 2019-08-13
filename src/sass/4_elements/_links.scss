@@ -1,0 +1,12 @@
+// Links
+//
+// Unclassed link elements
+//
+// Styleguide Base.Links
+
+    a {
+        padding: var(--space-quarter);
+        color: var(--color-link);
+        text-decoration: none;
+        border-bottom: 1px solid currentColor;
+    }

@@ -1,0 +1,54 @@
+//  Flag object
+//
+//  Similar to the media object, but gives us control over vertical alignment
+//
+//  Styleguide: Objects.Flag
+
+    %o-flag,
+    .o-flag {
+        display: table;
+        width: 100%;
+    }
+
+        .o-flag__img,
+        .o-flag__bd {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .o-flag__img {
+            padding-right: space(quarter);
+
+            > * {
+                max-width: none;
+            }
+
+            .o-flag--large & {
+                padding-right: space();
+            }
+        }
+
+        .o-flag__bd {
+            width: 100%;
+        }
+
+
+//  Reversed Flag
+
+    .o-flag--rev {
+        direction: rtl;
+
+        .o-flag__img,
+        .o-flag__bd {
+            direction: ltr;
+        }
+
+        .o-flag__img {
+            padding-right: 0;
+            padding-left: space(quarter);
+        }
+
+        &.o-flag--large .o-flag__img {
+            padding-left: space();
+        }
+    }

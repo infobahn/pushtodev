@@ -1,0 +1,22 @@
+// ============================================================================
+//  Colours
+// ============================================================================
+
+    :root {
+        // Brand colours
+        --color-pink:                   hsl(337, 93%, 66%);
+        --color-green:                  hsl(169, 55%, 48%);
+
+        // Colour uses
+        --color-body:                   #fff;
+        --color-divider:                hsl(221, 21%, 85%);
+
+        --color-text:                   hsl(215, 17%, 20%);
+        --color-subtext:                hsl(222, 22%, 70%);
+
+        --color-link:                   var(--color-pink);
+        --color-link-visited:           var(--color-pink);
+        --color-link-hover:             var(--color-pink);
+        --color-link-focus:             var(--color-pink);
+        --color-link-active:            var(--color-pink);
+    }

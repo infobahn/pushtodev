@@ -1,0 +1,17 @@
+//  Columns
+//
+//  Flex based columns - widths are governed by utility classes e.g. .u-1-2, .u-2-3
+
+    .o-cols {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin: 0 em($base-space * -0.5);
+        padding: 0;
+        list-style: none;
+    }
+
+        .o-cols__col {
+            padding: 0 space(half);    
+        }

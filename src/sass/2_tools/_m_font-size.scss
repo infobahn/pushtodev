@@ -1,0 +1,39 @@
+//  Font Size
+//
+//  A mixin and associated functions to output a font-size and line-height from our typography map
+//
+//  Compatability untested
+
+    @mixin font-size($font-size, $face:$base-font, $size: $base-font-size, $line-height:$font-size, $weight: normal) {
+
+        font-size: em(calc-font-size($font-size, $face), $size);
+
+        @if calc-line-height($line-height, $face) != $base-line-height {
+            line-height: calc-line-height($line-height, $face);
+        }
+
+    }
+
+    @function calc-font-size($size-name, $face:$base-font) {
+        @return _fontset-feature(font-size, $face, $size-name);
+    }
+
+    @function calc-line-height($size-name, $face:$base-font) {
+        @return _fontset-feature(line-height, $face,  $size-name);
+        /* @return $result / 1em; */
+    }
+
+    @function _fontset-feature($feature, $face:$base-font, $size-name: 'base'){
+
+        // get the target set of values from the requested face name
+        $family: map-get($fonts, $face);
+
+        // get the values for the named size
+        $size-values: map-get($family, $size-name);
+
+        // get the value for the feature we want
+        @return map-get($size-values, $feature);
+
+        // em me baby, oh yeah
+        /* @return em($result, $base); */
+    }

@@ -1,0 +1,17 @@
+// ============================================================================
+//  Spacing
+// ============================================================================
+
+//  Colour palette method borrowed from Erskine Design, as per:
+//  http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
+// ----------------------------------------------------------------------------
+
+    $spaces: (
+        quarter:            $base-space * 0.25,
+        half:               $base-space * 0.5,
+        threequarter:       $base-space * 0.75,
+        base:               $base-space,
+        mid:                $base-space * 1.5,
+        double:             $base-space * 2,
+        landmark:           $base-space * 3
+    );

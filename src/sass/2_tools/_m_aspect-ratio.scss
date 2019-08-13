@@ -1,0 +1,44 @@
+// Font Size
+//
+// A mixin to force elements to maintain a fixed aspect ratio
+//
+// Compatability untested
+
+    .o-ar {
+        position: relative;
+
+        &:before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: (1 / 1) * 100%; // (height/width) * 100%
+        }
+
+        > .o-ar__content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+
+            img {
+                min-width: 100%;
+                max-width: none;
+                height: auto;
+                max-height: 100%;
+            }
+        }
+    }
+
+    .o-ar--sixteen-six {
+        &::before {
+            padding-top: (6 / 16) * 100%;
+        }
+    }
+
+    .o-ar--two-one {
+        &::before {
+            padding-top: (1 / 2) * 100%;
+        }
+    }
