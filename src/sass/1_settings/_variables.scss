@@ -4,31 +4,31 @@
 
     :root {
     //  Font families
-        --copy-font:                "Dagny Pro", "IBM Plex Serif", Georgia, "Times New Roman", Times, serif;
-        --heading-font:             "Soleil", "IBM Plex Serif", Georgia, "Times New Roman", Times, serif;
+        --copy-font:                aktiv-grotesk, Helvetica, Arial, sans-serif;
+        --heading-font:             aktiv-grotesk, Helvetica, Arial, sans-serif;
         --code-font:                "IBM Plex Mono", Consolas, Monaco, mono;
 
     //  Font sizes
         --size-copy-x-small:        16px;
         --size-copy-small:          18px;
-        --size-copy-base:           20px;
-        --size-copy-large:          22px;
-        --size-copy-x-large:        26px;
+        --size-copy-base:           22px;
+        --size-copy-large:          26px;
+        --size-copy-x-large:        30px;
 
     //  Font weights
         --weight-normal:            400;
         --weight-bold:              700;
 
     //  Heading sizes
-        --size-h6:                  18px;
-        --size-h5:                  20px;
+        --size-h6:                  20px;
+        --size-h5:                  22px;
         --size-h4:                  24px;
-        --size-h3:                  28px;
-        --size-h2:                  36px;
-        --size-h1:                  48px;
+        --size-h3:                  26px;
+        --size-h2:                  28px;
+        --size-h1:                  36px;
 
     //  Line heights
-        --line-height-tight:        1.4;
+        --line-height-tight:        1.2;
         --line-height-base:         1.75;
         --line-height-loose:        2;
 

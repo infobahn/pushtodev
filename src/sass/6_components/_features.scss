@@ -37,18 +37,18 @@
         // }
     }
 
-    .features__heading {
-        grid-column: sidebar-start / sidebar-end;
-        margin-bottom: var(--space);
-        font-size: 62px;
+    // .features__heading {
+    //     grid-column: sidebar-start / sidebar-end;
+    //     margin-bottom: var(--space);
+    //     font-size: 62px;
 
-        span {
-            background-color: var(--color-green);
-            color: var(--color-body);
-            outline: var(--space-quarter) solid var(--color-green);
-            line-height: 1.75;
-        }
-    }
+    //     span {
+    //         background-color: var(--color-green);
+    //         color: var(--color-body);
+    //         outline: var(--space-quarter) solid var(--color-green);
+    //         line-height: 1.75;
+    //     }
+    // }
 
     
 

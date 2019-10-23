@@ -1,10 +1,17 @@
 //  Site Header
 
     .site-header {
-        height: calc(100vw / 12);
-        align-items: end;
-        padding-bottom: var(--space-half);
-        border-bottom: 1px solid var(--color-text);
+        grid-column: sidebar-start / -3;
+        grid-row: 2;
+        height: calc(100vw / 24);
+        background-color: var(--color-red);
+        mix-blend-mode: multiply;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 var(--space-threequarter);
+        z-index: 10;
+
         
         a {
             padding: 0;
@@ -13,18 +20,18 @@
     }
 
         .site-header__logo {
-            grid-column: sidebar-start / span 2;
             font-weight: var(--weight-bold);
-            color: var(--color-text);
+            color: var(--color-body);
+            font-size: var(--size-copy-base);
         }
 
         .site-header__contact {
-            grid-column: span 1 / main-end;
             margin: 0;
             text-align: right;
         }
 
         .site-header__email,
         .site-header__twitter {
-            
+            font-size: var(--size-copy-small);
+            color: var(--color-body);
         }
