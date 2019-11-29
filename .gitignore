@@ -1,9 +1,3 @@
-# Dist directories (except for vendor)
-dist/css
-dist/images
-dist/js
-styleguide/
-
 # Sass
 .sass-cache/
 *.css.map
