@@ -1,0 +1,32 @@
+//  Utilities
+//
+//  Utility classes used in various places around the site
+
+//  Screen reader only text
+    .u-sr {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: auto;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+        white-space: nowrap;
+    }
+
+//  Skip link at the top of the page
+    .u-skip-link {
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        padding: var(--space);
+        text-align: center;
+        transition: top 0.5s ease-out;
+        outline: 2px solid tomato;
+
+        &:focus {
+            top: 0;
+        }
+    }

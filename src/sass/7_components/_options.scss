@@ -1,0 +1,53 @@
+//  Options
+
+    .options {
+
+        ol {
+            counter-reset: option;
+            margin: 2rem 0;
+            padding: 0;
+            list-style: none;
+            border: 1px solid var(--color-text);
+
+            li {
+                display: flex;
+                padding-right: var(--space);
+                border-bottom: 1px solid var(--color-text);
+                
+                &:last-of-type {
+                    border-bottom: 0;
+                }
+
+                &:before {
+                    display: flex;
+                    align-items: center;
+                    counter-increment: option;
+                    content: counter(option);
+                    padding: 0 var(--space-mid);
+                    font-size: 3rem;
+                    // line-height: 1;
+                    color: hsla(37, 74%, 91%, 0.3);
+                    font-weight: var(--weight-bold);
+                    border-right: 1px solid var(--color-text);
+                }
+
+                span {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: var(--space-threequarter) var(--space);
+                    font-size: var(--size-copy-small);
+                    line-height: var(--line-height-tight);
+                }
+            }
+        }
+
+        h3 {
+            margin: 0 0 var(--space-quarter);
+            font-size: var(--size-h4);
+        }
+
+        p:last-of-type {
+            margin-bottom: 0;
+        }
+    }

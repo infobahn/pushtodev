@@ -1,0 +1,36 @@
+//  Sections
+//
+//  Global styles for sections
+
+    // main {
+        
+    // }
+
+        section {
+            display: grid;
+            grid-template-columns: minmax(var(--space), var(--space-double)) 1fr 1fr minmax(var(--space), var(--space-double));
+
+            @media only screen and (min-width: 768px) {
+                grid-template-columns: minmax(var(--space), 0.5fr) 1fr 1fr 1fr 1fr minmax(var(--space), 0.5fr);
+            }
+
+            @media only screen and (min-width: 900px) {
+                column-gap: 2.5rem;
+            }
+
+            @media only screen and (min-width: 1510px) {
+                column-gap: 5rem;
+            }
+
+            > * {
+                grid-column: 2 / span 2;
+                
+                @media only screen and (min-width: 768px) {
+                    grid-column: 3 / span 3;
+                }
+                
+                @media only screen and (min-width: 1510px) {
+                    grid-column: 4 / span 2;
+                }
+            }
+        }

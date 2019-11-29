@@ -3,23 +3,26 @@
 // ============================================================================
 
     :root {
+        --color-white:                  hsl(37, 74%, 91%);
+        --color-black:                  #000;
+
         // Brand colours
-        --color-pink:                   hsl(337, 93%, 66%);
-        --color-pink:                   hsl(5, 78%, 69%);
-        --color-green:                  hsl(169, 55%, 48%);
-        --color-green:                  hsl(142, 92%, 72%);
-        --color-red:                    hsl(5, 54%, 52%);
+        --color-pink:                   hsl(343, 87%, 59%);
+        --color-green:                  hsl(173, 66%, 43%);
+        --color-blue:                   hsl(229, 53%, 23%);
+        --color-yellow:                 hsl(38, 92%, 60%);
 
         // Colour uses
-        --color-body:                   #fff;
-        --color-divider:                hsl(221, 21%, 85%);
+        --color-body:                   var(--color-green);
+        --color-divider:                var(--color-blue);
 
-        --color-text:                   hsl(215, 17%, 20%);
-        --color-subtext:                hsl(222, 22%, 70%);
+        --color-headings:               hsl(324, 5%, 21%);
+        --color-text:                   hsl(324, 5%, 21%);
+        --color-subtext:                var(--color-white);
 
-        --color-link:                   var(--color-pink);
-        --color-link-visited:           var(--color-pink);
-        --color-link-hover:             var(--color-pink);
-        --color-link-focus:             var(--color-pink);
-        --color-link-active:            var(--color-pink);
+        --color-link:                   var(--color-white);
+        --color-link-visited:           var(--color-white);
+        --color-link-hover:             var(--color-white);
+        --color-link-focus:             var(--color-white);
+        --color-link-active:            var(--color-white);
     }

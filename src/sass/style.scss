@@ -10,7 +10,6 @@
 //  1. Settings
 //  Global variables, config switches
 
-    @import "1_settings/config";        //  Configuration and environment settings
     @import "1_settings/colours";       //  Manage our color palette in isolation.
     @import "1_settings/variables";     //  Globally-available variables and settings/config.
 
@@ -22,10 +21,8 @@
 //  3. Generic
 //  Ground-zero styles (Normalize.css, resets, box-sizing)
 
-    @import "3_generic/box-sizing";
-    @import "3_generic/normalise";
+    @import "3_generic/reset";
     @import "3_generic/fonts";
-    @import "3_generic/base";
 
 //  4. Base
 //  Unclassed HTML elements (type selectors).
@@ -43,38 +40,30 @@
 //  5. Objects
 //  Cosmetic-free design patterns.
 
-    // @import "5_objects/box";
-    // @import "5_objects/columns";
-    // @import "5_objects/flag";
-    // @import "5_objects/icon";
-    @import "5_objects/list-block";
     @import "5_objects/list-inline";
-    // @import "5_objects/list-ui";
-    // @import "5_objects/media";
-    // @import "5_objects/nav";
+    @import "5_objects/stack";
+    @import "5_objects/switcher";
 
-//  6. Components
+//  6. Globals
+//  UI that repeats on all pages. Headers, footers etc.
+    @import "6_globals/grid";
+    @import "6_globals/site-header";
+    @import "6_globals/site-footer";
+    @import "6_globals/sections";
+
+//  7. Components
 //  Designed components, chunks of UI.
 
-    @import "6_components/grid";
-    @import "6_components/site-header";
-    @import "6_components/site-footer";
-    @import "6_components/intro";
-    @import "6_components/features";
-    @import "6_components/experience";
-    @import "6_components/how-it-works";
-    @import "6_components/testimonials";
-    @import "6_components/contact";
-    @import "6_components/case-study";
-    @import "6_components/benefits";
+    @import "7_components/intro";
+    @import "7_components/value";
+    @import "7_components/options";
+    @import "7_components/testimonials";
+    @import "7_components/experience";
+    @import "7_components/contact";
+    @import "7_components/block-list";
+    @import "7_components/call-to-action";
 
-//  7. Trumps
-//  Helpers and overrides.
+//  8. Utilities
+//  Small, single-use classes
 
-    // @import "7_trumps/utilities";
-    // @import "7_trumps/hidden";
-
-//  8. Vendor styles
-//  Styles used by vendor libraries and components
-
-    // @import "8_vendor/select2";
+    @import "8_utilities/accessibility";

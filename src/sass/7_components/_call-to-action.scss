@@ -1,0 +1,54 @@
+//  Call to Action
+
+    .cta {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr 5rem 1.5fr 0.5fr;
+        grid-template-rows: 0.25fr auto auto 2fr;
+        max-width: none;
+        margin: var(--space-double) 0 0;
+        padding: var(--space) 0 0;
+        font-weight: var(--weight-bold);
+        font-size: var(--size-copy-large);
+    }
+
+    .cta__text {
+        grid-column: 1 / -1;
+        grid-row: 2 / span 1;
+    }
+
+    .cta__link {
+        position: relative;
+        grid-column: 1 / -1;
+        grid-row: 3 / span 1;
+        padding-bottom: var(--space);
+        border-bottom: 2px solid var(--color-text);
+        font-size: var(--size-copy-x-large);
+
+        &:before {
+            content: "";
+            display: block;
+            width: var(--space);
+            height: var(--space);
+            position: absolute;
+            right: 1px;
+            bottom: -1px;
+            transform: translateY(50%) rotate(45deg);
+            border-style: solid;
+            border-color: var(--color-text);
+            border-width: 2px 2px 0 0;
+            z-index: 1;
+        }
+    }
+
+    .cta__arrow {
+        display: block;
+        position: relative;
+        grid-column: 2 / span 3;
+        grid-row: 1 / -1;
+        opacity: 0.2;
+        
+        path {
+            fill: #fff;
+        }
+    }

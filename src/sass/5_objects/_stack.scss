@@ -1,0 +1,24 @@
+//  The Stack
+// 
+//  From Every Layout, by Heydon Pickering & Andy Bell
+//  https://every-layout.dev/layouts/stack/
+
+
+    .stack {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .stack > * {
+        margin-top: 0;
+        margin-bottom: 0;
+    } 
+
+    .stack > * + * {
+        margin-top: var(--space-double);
+
+        @media only screen and (min-width: 768px) {
+            margin-top: var(--space-landmark);
+        }
+    }

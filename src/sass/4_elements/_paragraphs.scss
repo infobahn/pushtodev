@@ -3,5 +3,67 @@
 // Typographical, paragraph level styles
 
     p {
+        max-width: 60ch;
+        margin: 0 0 1em;
+    }
+
+    .lede {
+        // max-width: 40ch;
+        font-size: var(--size-h5);
+    }
+
+    small {
+        font-size: var(--size-copy-x-small);
+        color: var(--color-subtext);
+    }
+
+    blockquote {
         margin: 0 0 var(--space);
+        border-right: 0;
+        border-left: 0;
+        font-size: var(--size-copy-large);
+        font-weight: var(--weight-bold);
+
+        @media only screen and (min-width: 768px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 5rem;
+            font-size: var(--size-copy-x-large);
+        }
+
+        p {
+            grid-column: 2 / span 2;
+            hyphens: inherit;
+            text-align: left;
+        }
+
+        p:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    cite {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 2;
+        align-self: center;
+        margin-top: var(--space-mid);
+        display: inline-block;
+        font-style: normal;
+        font-size: var(--size-copy-x-small);
+        font-weight: var(--weight-normal);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        line-height: var(--line-height-loose);
+
+        @media only screen and (min-width: 768px) {
+            margin-top: 0;
+        }
+    }
+
+
+    hr {
+        width: 100%;
+        margin: 0;
+        border: 0;
+        border-bottom: 1px solid var(--color-text);
     }

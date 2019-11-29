@@ -1,0 +1,36 @@
+//  Block list
+
+    ul.block-list {
+        grid-column: 1 / span 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: var(--space-mid);
+        list-style: none;
+        margin: 3em 0;
+        padding: 0;
+
+        @media only screen and (min-width: 768px) {
+            grid-column: 5 / span 3;
+        }
+
+        @media only screen and (min-width: 1400px) {
+            grid-column: 5 / span 2;
+        }
+
+    }
+
+    .block-list__item {
+        margin-bottom: var(--space-half);
+        padding-top: var(--space-half);
+        border-top: 1px solid var(--color-text);
+        font-size: var(--size-copy-x-small);
+        text-transform: uppercase;
+        letter-spacing: 0.075em;
+
+        span {
+            display: block;
+            text-transform: none;
+            letter-spacing: 0;
+            font-size: var(--size-copy-small);
+        }
+    }

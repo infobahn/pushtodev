@@ -5,10 +5,16 @@
 // Styleguide Base.Headings
 
     h1, h2, h3, h4, h5, h6 {
-        margin-top: 0;
+        margin: 0 0 1em;
         font-family: var(--heading-font);
         line-height: var(--line-height-tight);
-        color: var(--color-text);
+        color: var(--color-headings);
+        font-weight: 500;
+
+        strong {
+            font-weight: 500;
+            color: var(--color-white);
+        }
     }
 
     h1 {
@@ -17,14 +23,18 @@
 
     h2 {
         font-size: var(--size-h2);
+        margin: 0 0 0.75em;
     }
 
     h3 {
         font-size: var(--size-h3);
+        margin: 1em 0 .5em;
     }
 
     h4 {
         font-size: var(--size-h4);
+        margin-top: 0;
+        margin-bottom: var(--space-quarter);
     }
 
     h5 {
