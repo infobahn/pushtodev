@@ -20,9 +20,9 @@
         --color-text:                   hsl(324, 5%, 21%);
         --color-subtext:                var(--color-white);
 
-        --color-link:                   var(--color-white);
-        --color-link-visited:           var(--color-white);
+        --color-link:                   var(--color-text);
+        --color-link-visited:           var(--color-text);
         --color-link-hover:             var(--color-white);
-        --color-link-focus:             var(--color-white);
-        --color-link-active:            var(--color-white);
+        --color-link-focus:             var(--color-text);
+        --color-link-active:            var(--color-text);
     }

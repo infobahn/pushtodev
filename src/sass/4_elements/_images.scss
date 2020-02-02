@@ -7,3 +7,38 @@
     svg path {
         fill: currentColor;
     }
+
+    figure {
+        grid-column: 2 / -2 !important;
+        margin: var(--space-landmark) 0;
+        padding: var(--space-mid) 0;
+        border-style: solid;
+        border-width: 3px 0;
+        border-color: var(--color-text);
+
+        @media only screen and (min-width: 768px) {
+            grid-column: 2 / -2 !important;
+        }
+    }
+
+        figcaption {
+            grid-column: 2 / span 2 !important;
+            align-self: start;
+            width: calc(50% - 5rem);
+            transform: translateX(50%);
+            margin: calc(var(--space-landmark) * -1) 0 0;
+            padding: var(--space);
+            background: rgba(black, 0.075);
+            border: 2px solid var(--color-text);
+            border-top: 0;
+            font-size: var(--size-copy-x-small);
+            line-height: var(--line-height-tight);
+
+            > *:first-child {
+                margin-top: 0;
+            }
+
+            > *:last-child {
+                margin-bottom: 0;
+            }
+        }

@@ -1,0 +1,36 @@
+//  Article Listing
+// 
+//  Styles for the article listing page
+
+    .articles-list {
+        grid-column: 2 / -2;
+    }
+
+        .articles-list__item {
+            width: 100%;
+        }
+
+            .articles-list__article {
+                display: flex;
+                align-items: center;
+                padding: var(--space-threequarter) 0;
+                border-bottom: 1px solid var(--color-text);
+
+                .articles-list__item:last-child & {
+                    border-bottom: 0;
+                }
+            }
+
+                .articles-list__title {
+                    order: 1;
+                    margin: 0;
+                    border: 0;
+                }
+                
+                .articles-list__datetime {
+                    order: 0;
+                    padding-right: var(--space);
+                    margin-right: var(--space);
+                    border-right: 1px solid var(--color-text);
+                    font-family: var(--code-font);
+                }

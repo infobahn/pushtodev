@@ -12,23 +12,23 @@
         --size-copy-xx-small:       12px;
         --size-copy-x-small:        15px;
         --size-copy-small:          18px;
-        --size-copy-base:           19px;
-        --size-copy-large:          21px;
-        --size-copy-x-large:        26px;
+        --size-copy-base:           22px;
+        --size-copy-large:          25px;
+        --size-copy-x-large:        28px;
 
     //  Font weights
         --weight-normal:            300;
         --weight-bold:              500;
 
     //  Heading sizes
-        --size-h6:                  20px;
-        --size-h5:                  23px;
-        --size-h4:                  20px;
+        --size-h6:                  22px;
+        --size-h5:                  25px;
+        --size-h4:                  26px;
         --size-h3:                  28px;
         --size-h2:                  36px;
         --size-h1:                  36px;
 
-    @media only screen and (max-width: 400px) {
+    @media only screen and (max-width: 468px) {
         --size-copy-xx-small:       13px;
         --size-copy-x-small:        14px;
         --size-copy-small:          15px;

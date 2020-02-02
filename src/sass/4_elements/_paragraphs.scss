@@ -8,8 +8,8 @@
     }
 
     .lede {
-        // max-width: 40ch;
-        font-size: var(--size-h5);
+        font-size: var(--size-copy-x-large);
+        margin-bottom: 1.5em;
     }
 
     small {
@@ -25,6 +25,7 @@
         font-weight: var(--weight-bold);
 
         @media only screen and (min-width: 768px) {
+            grid-column: 3 / span 3 !important;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             column-gap: 5rem;
@@ -38,7 +39,29 @@
         }
 
         p:last-of-type {
-            margin-bottom: 0;
+            margin-bottom: 1rem;
+        }
+
+        .article & {
+            margin: var(--space-double) 0;
+
+            @media only screen and (min-width: 768px) {
+                grid-column: 2 / span 4 !important;
+                grid-template-columns: 1fr 1fr auto 1fr 1fr auto 1fr 1fr auto 1fr 1fr;
+                column-gap: 0;
+            }
+
+            @media only screen and (min-width: 900px) {
+                grid-template-columns: 1fr 1fr 2.5rem 1fr 1fr 2.5rem 1fr 1fr 2.5rem 1fr 1fr;
+            }
+
+            @media only screen and (min-width: 1510px) {
+                grid-template-columns: 1fr 1fr 5rem 1fr 1fr 5rem 1fr 1fr 5rem 1fr 1fr;
+            }
+
+            p, ul, ol {
+                grid-column: 5 / -2;
+            }
         }
     }
 
@@ -58,6 +81,14 @@
         @media only screen and (min-width: 768px) {
             margin-top: 0;
         }
+
+        .article & {
+            grid-column: 1 / span 2;
+
+            @media only screen and (min-width: 1300px) {
+                grid-column: 2 / span 2;
+            }
+        }
     }
 
 
@@ -66,4 +97,20 @@
         margin: 0;
         border: 0;
         border-bottom: 1px solid var(--color-text);
+
+        .article & {
+            margin: var(--space-landmark) 0;
+        }
     }
+
+    dl {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: var(--space-double);
+        row-gap: var(--space-half);
+        margin: var(--space) 0;
+    }
+
+        dt {
+            font-weight: var(--weight-bold);
+        }

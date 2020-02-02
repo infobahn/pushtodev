@@ -1,0 +1,24 @@
+//  Sub Pages
+// 
+//  Styles for sub-pages
+
+    .sub-page__title {
+        grid-column: 2 / span 2;
+        margin: 3rem 0 7rem;
+        font-size: 120px;
+        line-height: 1.15;
+
+        @media only screen and (min-width: 769px) {
+            grid-column: 2 / span 4;
+        }
+
+        @media only screen and (max-width: 768px) {
+            font-size: 70px;
+            margin: 3rem 0 3rem;
+        }
+
+        @media only screen and (max-width: 468px) {
+            font-size: var(--size-h1);
+            margin: 3rem 0 3rem;
+        }        
+    }
