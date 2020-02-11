@@ -1,238 +1,141 @@
-<!DOCTYPE html>
-<html class="no-js no-svg" lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+---
+title:              "Pseudo content that makes sense"
+date:               2020-01-14
+author:             Sam Roberts
+author_twitter:     pushtodev
+---
 
-    <link rel="stylesheet" href="https://use.typekit.net/jto5nnu.css">
-    <link href="/dist/css/style.css" rel="stylesheet">
+<p>If you work in the design or web world, chances are you&rsquo;re familiar with pseudo content. This is using dummy text to represent real content in a design, either to avoid distracting readers with the written content, or when that content hasn&rsquo;t been written yet.</p>
+
+<p>You&rsquo;ve probably seen it before - the most famous example is the latin-based Lorem Ipsum text, but there are hundreds of variations and alternatives.</p>
+
+<blockquote>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <cite>The standard Lorem Ipsum passage, used since the 1500s, <a href="https://lipsum.com/" target="_blank">lipsum.com</a>.</cite>
+
+</blockquote>
+
+<p>On several recent projects, I've found myself having to build sites from designs that are still using placeholder content, and more than once I've been handed 'finished' designs for complex web apps or e-commerce sites where the use of pseudo content makes elements of the design difficult or impossible to understand by anyone receiving them cold.</p>
+
+<p>An example: I'd been brought onto an e-commerce project that was just entering development. The design for the product template included a label which contained only an icon and a few words of placeholder text.</p>
+
+<p>It was only after talking to the designer and client that I discovered that their products actually came in quantities designed to last a specific length of time, and this label represented that duration. Behind the vaguely worded label, lurked another feature requirement!</p>
+
+<p>Using real content on this element wouldn't have changed the fact that there was an undocumented requirement on the project, but it would certainly have brought it to my attention sooner.</p>
+
+<h2>So long, ipsum</h2>
+
+<p>When it comes to designing and building websites, then, I think that pseudo content hinders more than it helps. However, we've all had design reviews where the reader focuses in on a tiny turn of phrase in the copy, potentially derailing the entire process.</p>
+
+<p>I started wondering if there was a way to solve both problems. A way to make clear to people working on the project what all the elements were for, while at the same time staying in the background during design reviews etc.</p>
+
+<p>In an ideal world, we'd go into every project with the content all finalised, but in real life there are times where this isn't possible.</p>
+
+<p>Sometimes deadlines mean a project has to be started before the content is fully written. However, designing and developing before the content has been thought through  correct content can be a recipe for disaster.</p>
+
+<p>In the worst instance of this that I've been involved with, this has resulted in senior management insisting a site be completely redesigned right before launch, because the content that was ultimately created didn't match the design that had been commissioned and signed off months earlier.</p>
+
+<h2>Drumroll please</h2>
+
+<p>The solution I hit on was surprisingly simple, and can be easily slotted in to existing scoping/planning phases of a project.</p>
+
+<p>When wireframing templates and user journeys, take the time to flesh out in detail the purpose of every piece of content. Then instead of using latin text in the design and build, write a short sentence describing the purpose of the content and repeat that for the estimated length of the content.</p>
+
+<p>It doesn't have to be perfect, or even well-written. It just has to describe what the content is intended to do, to make it easier for people working on the site to parse.</p>
+
+<p>Here's an example using a fairly common pattern - a home page hero area. It's a large full-width header image, with content overlaid. In this case, the content is a title, which the client wants to use to reinforce the company tagline; a lede paragraph, which will introduce the company's build-your-own monthly consultation packages. The last element is a call to action button encouraging users to book a consultation.</p>
+
+<p>Assuming the content isn't ready, here's how we might typically set this up.</p>
+
+<figure>
+
+    <div class="wireframe">
+        <span class="wireframe__title">Lorem ipsum</span>
+        <span class="wireframe__lede">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio excepturi ab labore. Magnam assumenda tempore facilis, eligendi illum ullam.</span>
+        <span class="wireframe__button">Lorem ipsum &nbsp; &rarr;</span>
+    </div>
+
+    <style>
     
-    <link rel="profile" href="http://gmpg.org/xfn/11">
+        .wireframe {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 4rem;
+            /* text-align: center; */
+        }
+
+            .wireframe__title {
+                font-size: 3rem;
+                max-width: 20ch;
+                font-weight: 500;
+            }
+
+            .wireframe__lede {
+                display: block;
+                max-width: 70ch;
+                margin: 0.5rem 0 2rem;
+                font-weight: 500;
+            }
+
+            .wireframe__button {
+                display: inline-block;
+                margin: auto;
+                padding: 0.5rem 1rem;
+                font-size: 0.75rem;
+                font-weight: 500;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                border: 2px solid var(--color-text);
+                border-rarius: 5px;
+            }
+
     
-    <title>Pseudo content that makes sense</title>
-    <meta property="og:title" content="Pseudo content that makes sense" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://www.pushtodev.com/articles/design-and-development/pseudo-content-that-makes-sense/" />
-    <meta property="og:description" content="If you work in the design or web world, chances are you&rsquo;re familiar with pseudo content. This is using dummy text to represent real content in a design..." />
-    <!-- <meta property="og:image" content="https://www.pushtodev.com/images/p2d.png" /> -->
+    </style>
 
-</head>
+</figure>
 
-<body class="sub-page">
+<figcaption>
 
-    <a class="u-skip-link" href="#main">Skip to main content</a>
+    <dl>
+        <dt>Title</dt>
+        <dd>Lorem ipsum</dd>
+        <dt>Lede paragraph</dt>
+        <dd>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio excepturi ab labore. Magnam assumenda tempore facilis, eligendi illum ullam.</dd>
+        <dt>Button</dt>
+        <dd>Lorem ipsum</dd>
+    </dl>
 
-    <header class="site-header" role="banner">
+</figcaption>
 
-        <nav class="site-header__nav">
+<p>However, this is pretty vague. The designer keeps having to refer back to the scope document to remember the purpose of the elements, and anyone else seeing the design will need it explained to them. It's additional mental load we could do without.</p>
 
-            <a class="site-header__nav-link" href="/">Home</a>
-            <a class="site-header__nav-link is-current" href="/articles">Articles</a>
-            <a class="site-header__nav-link" href="mailto:hello@pushtodev.com">hello@pushtodev.com</a>
-            <a class="site-header__nav-link" href="https://twitter.com/pushtodev">@pushtodev.com</a>
+<p>Here's an alternative, where the content describes its own purpose:</p>
 
-        </nav>
-    
-    </header>
+<figure>
 
-    <main class="stack" id="main">
+    <div class="wireframe">
+        <span class="wireframe__title">Company tagline. Company tagline.</span>
+        <span class="wireframe__lede">Highlight build-your-own subscription packages. Highlight build-your-own subscription packages. Highlight build-your-own subscription packages.</span>
+        <span class="wireframe__button">Book consultation &nbsp; &rarr;</span>
+    </div>
 
-        <article class="article">
+</figure>
 
-            <h1 class="article__title">Pseudo content that makes&nbsp;sense</h1>
+<figcaption>
 
-            <span class="article__meta">
+    <dl>
+        <dt>Title</dt>
+        <dd>Company tagline. Company tagline.</dd>
+        <dt>Lede paragraph</dt>
+        <dd>Highlight build-your-own subscription packages. Highlight build-your-own subscription packages. Highlight build-your-own subscription packages.</dd>
+        <dt>Button</dt>
+        <dd>Book consultation</dd>
+    </dl>
 
-                <time class="article__datetime" datetime="2020-01-14">14 January, 2020</time>
+</figcaption>
 
-                <span class="article__author">By <a href="https://twitter.com/pushtodev">Sam Roberts</a></span>
 
-            </span>
+<p>Hopefully you'll agree that this version makes for a clearer, easier to parse design. It has other benefits too: it reduces the mental load for everyone working on the project; it removes the need to try and pressure the client into getting their content written sooner; and it also works pretty well as a guide for the copywriter who actually has to create the content. Not bad for a relatively small amount of work.</p>
 
-            <p class="lede">If you work in the design or web world, chances are you&rsquo;re familiar with pseudo content. This is using dummy text to represent real content in a design, either to avoid distracting readers with the written content, or when that content hasn&rsquo;t been written yet.</p>
-            
-            <p>You&rsquo;ve probably seen it before - the most famous example is the latin-based Lorem Ipsum text, but there are hundreds of variations and alternatives.</p>
-
-            <blockquote>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                <cite>The standard Lorem Ipsum passage, used since the 1500s, <a href="https://lipsum.com/">lipsum.com</a>.</cite>
-
-            </blockquote>
-
-            <p>On several recent projects, I've found myself having to build sites from designs that are still using placeholder content, and more than once I've been handed 'finished' designs for complex web apps or e-commerce sites where the use of pseudo content makes elements of the design difficult or impossible to understand by anyone receiving them cold.</p>
-
-            <p>An example: I'd been brought onto an e-commerce project that was just entering development. The design for the product template included a label which contained only an icon and a few words of placeholder text.</p>
-
-            <p>It was only after talking to the designer and client that I discovered that their products actually came in quantities designed to last a specific length of time, and this label represented that duration. Behind the vaguely worded label, lurked another feature requirement!</p>
-
-            <p>Using real content on this element wouldn't have changed the fact that there was an undocumented requirement on the project, but it would certainly have brought it to my attention sooner.</p>
-
-            <h2>So long, ipsum</h2>
-
-            <p>When it comes to designing and building websites, then, I think that pseudo content hinders more than it helps. However, we've all had design reviews where the reader focuses in on a tiny turn of phrase in the copy, potentially derailing the entire process.</p>
-
-            <p>I started wondering if there was a way to solve both problems. A way to make clear to people working on the project what all the elements were for, while at the same time staying in the background during design reviews etc.</p>
-
-            <p>In an ideal world, we'd go into every project with the content all finalised, but in real life there are times where this isn't possible.</p>
-
-            <p>Sometimes deadlines mean a project has to be started before the content is fully written. However, designing and developing before the content has been thought through  correct content can be a recipe for disaster.</p>
-
-            <p>In the worst instance of this that I've been involved with, this has resulted in senior management insisting a site be completely redesigned right before launch, because the content that was ultimately created didn't match the design that had been commissioned and signed off months earlier.</p>
-
-            <h2>Drumroll please</h2>
-
-            <p>The solution I hit on was surprisingly simple, and can be easily slotted in to existing scoping/planning phases of a project.</p>
-
-            <p>When wireframing templates and user journeys, take the time to flesh out in detail the purpose of every piece of content. Then instead of using latin text in the design and build, write a short sentence describing the purpose of the content and repeat that for the estimated length of the content.</p>
-
-            <p>It doesn't have to be perfect, or even well-written. It just has to describe what the content is intended to do, to make it easier for people working on the site to parse.</p>
-
-            <p>Here's an example using a fairly common pattern - a home page hero area. It's a large full-width header image, with content overlaid. In this case, the content is a title, which the client wants to use to reinforce the company tagline; a lede paragraph, which will introduce the company's build-your-own monthly consultation packages. The last element is a call to action button encouraging users to book a consultation.</p>
-
-            <p>Assuming the content isn't ready, here's how we might typically set this up.</p>
-
-            <figure>
-
-                <div class="wireframe">
-                    <span class="wireframe__title">Lorem ipsum</span>
-                    <span class="wireframe__lede">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio excepturi ab labore. Magnam assumenda tempore facilis, eligendi illum ullam.</span>
-                    <span class="wireframe__button">Lorem ipsum &nbsp; &rarr;</span>
-                </div>
-
-                <style>
-                
-                    .wireframe {
-                        background: rgba(255, 255, 255, 0.3);
-                        padding: 4rem;
-                        /* text-align: center; */
-                    }
-
-                        .wireframe__title {
-                            font-size: 3rem;
-                            max-width: 20ch;
-                            font-weight: 500;
-                        }
-
-                        .wireframe__lede {
-                            display: block;
-                            max-width: 70ch;
-                            margin: 0.5rem 0 2rem;
-                            font-weight: 500;
-                        }
-
-                        .wireframe__button {
-                            display: inline-block;
-                            margin: auto;
-                            padding: 0.5rem 1rem;
-                            font-size: 0.75rem;
-                            font-weight: 500;
-                            letter-spacing: 0.1em;
-                            text-transform: uppercase;
-                            border: 2px solid var(--color-text);
-                            border-rarius: 5px;
-                        }
-
-                
-                </style>
-
-            </figure>
-
-            <figcaption>
-
-                <dl>
-                    <dt>Title</dt>
-                    <dd>Lorem ipsum</dd>
-                    <dt>Lede paragraph</dt>
-                    <dd>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio excepturi ab labore. Magnam assumenda tempore facilis, eligendi illum ullam.</dd>
-                    <dt>Button</dt>
-                    <dd>Lorem ipsum</dd>
-                </dl>
-
-            </figcaption>
-
-            <p>However, this is pretty vague. The designer keeps having to refer back to the scope document to remember the purpose of the elements, and anyone else seeing the design will need it explained to them. It's additional mental load we could do without.</p>
-
-            <p>Here's an alternative, where the content describes its own purpose:</p>
-
-            <figure>
-
-                <div class="wireframe">
-                    <span class="wireframe__title">Company tagline. Company tagline.</span>
-                    <span class="wireframe__lede">Highlight build-your-own subscription packages. Highlight build-your-own subscription packages. Highlight build-your-own subscription packages.</span>
-                    <span class="wireframe__button">Book consultation &nbsp; &rarr;</span>
-                </div>
-
-            </figure>
-
-            <figcaption>
-
-                <dl>
-                    <dt>Title</dt>
-                    <dd>Company tagline. Company tagline.</dd>
-                    <dt>Lede paragraph</dt>
-                    <dd>Highlight build-your-own subscription packages. Highlight build-your-own subscription packages. Highlight build-your-own subscription packages.</dd>
-                    <dt>Button</dt>
-                    <dd>Book consultation</dd>
-                </dl>
-
-            </figcaption>
-            
-
-            <p>Hopefully you'll agree that this version makes for a clearer, easier to parse design. It has other benefits too: it reduces the mental load for everyone working on the project; it removes the need to try and pressure the client into getting their content written sooner; and it also works pretty well as a guide for the copywriter who actually has to create the content. Not bad for a relatively small amount of work.</p>
-
-            <p>Of course, in an ideal world we'd always have the real content in place before ever starting to design. But in the messy, rushed, imperfect real world, this approach can go some way towards mitigating the problems of having to start a project before all the elements are in place.</p>
-
-            <div class="article-cta">
-
-                <h2 class="h3 article-cta__title">If you enjoyed this, there's a number of things you can do:</h2>
-
-                <!--<p>For more of this kind of thing, subscribe to the RSS feed.</p>-->
-
-                <p>Send questions or comments to <a href="mailto:hello@pushtodev.com">hello@pushtodev.com</a>.</p>
-
-                <p>And if you're feeling particularly generous, please like, retweet or share this post on Twitter. It really helps me out.</p>
-
-            </div>
-        
-        </article>
-    
-        <hr>
-
-        <section class="contact">
-        
-            <h2>Liked this? Why not get in touch?</h2>
-
-            <p>We can give you the freedom to deliver the quality you want to, so why not give us a try? Our services scale easily, so it&rsquo;s easy to start small and take it from there.</p>
-
-            <p class="cta">
-                <span class="cta__text">Email us on</span>
-                <a class="cta__link" href="mailto:hello@pushtodev.com">hello@pushtodev.com</a>
-                <svg class="cta__arrow" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" id="Layer_1" x="0" y="0" version="1.1" viewBox="0 0 95 84.4" xml:space="preserve"><path fill="#ffffff" d="M52.8 84.4L95 42.2 52.8 0 40.5 12.3l21.3 21.2H0v17.4h61.8L40.5 72.1z"/></svg>
-            </p>
-        
-        </section>
-    
-    </main>
-
-    <footer class="site-footer" role="complementary">
-    
-        <span class="site-footer__legal">
-            <strong>&copy; 2019. Push to Dev is incorporated in the Isle of Man #127449C</strong><br>
-            Icons created by Srinivas Agra, i cons, Aneeque Ahmed, SBTS, Adrien Coquet, Alice Design, Aneeque Ahmed, tezar tantular, Wichai Wi, Khalay Chio and iconeu from <a href="https://thenounproject.com">The Noun Project</a>
-        </span>
-
-        <div class="site-footer__links">
-            <a class="site-footer__link" href="https://twitter.com/pushtodev" target="_blank">
-                @pushtodev
-            </a>
-            <a class="site-footer__link" href="mailto:hello@pushtodev.com" target="_blank">
-                hello@pushtodev.com
-            </a>
-        </div>
-
-    </footer>
-
-</body>
-</html>
+<p>Of course, in an ideal world we'd always have the real content in place before ever starting to design. But in the messy, rushed, imperfect real world, this approach can go some way towards mitigating the problems of having to start a project before all the elements are in place.</p>

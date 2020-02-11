@@ -1,0 +1,36 @@
+<header class="site-header" role="banner">
+
+    {% if page.url == '/' %}
+
+        <h1 class="site-header__title">
+            <span>Push</span><span>to Dev</span>
+        </h1>
+
+        <hr class="site-header__divider">
+
+    {% endif %}
+
+    <nav class="site-header__nav">
+
+        <a class="site-header__nav-link {% if page.url == '/' %}is-current{% endif %}" href="/">Home</a>
+        <a class="site-header__nav-link {% unless page.url == '/' %}is-current{% endunless %}" href="/articles">Articles</a>
+        <a class="site-header__nav-link" href="mailto:hello@pushtodev.com">hello@pushtodev.com</a>
+        <a class="site-header__nav-link" href="https://twitter.com/pushtodev">@pushtodev.com</a>
+
+    </nav>
+
+    {% if page.url == '/' %}
+
+        <div class="site-header__text">
+
+            <h2 class="site-header__text-title">Web <strong>Development</strong>. <strong>Designed</strong> for&nbsp;Agencies.</h2>
+
+            <p class="lede">Push to Dev is a web development studio built for design agencies. We believe in facilitating excellent design on the web.</p>
+
+            <p class="lede">Our remote team works closely with your web design agency to help deliver brilliant websites and outstanding results for your clients.</p>
+
+        </div>
+
+    {% endif %}
+
+</header>

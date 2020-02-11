@@ -1,7 +1,16 @@
 //  Article pages
 
     .article {
+        & > p:first-of-type {
+            grid-row: 2 / span 1;
+            font-size: var(--size-copy-x-large);
+            margin-bottom: 1.5em;
 
+            @media only screen and (max-width: 1090px) {
+                grid-column: 2 / -2;
+                grid-row: span 1;
+            }
+        }
     }
         
         .article__title {
@@ -48,15 +57,6 @@
             .article__author {
                 display: block;
             }
-
-        .article__lede {
-            grid-row: 2 / span 1;
-
-            @media only screen and (max-width: 1090px) {
-                grid-column: 2 / -2;
-                grid-row: span 1;
-            }
-        }
 
     .article-cta {
         grid-column: span 2 / -2;

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html class="no-js no-svg" lang="en">
+
+    <head>
+        
+        {% include partials/head %}
+        {% include partials/meta %}
+
+    </head>
+
+    <body {% unless page.url == '/' %}class="sub-page"{% endunless %}>
+
+        <a class="u-skip-link" href="#main">Skip to main content</a>
+
+        {% include partials/header %}
+
+        <main class="stack" id="main">
+
+            {{ content }}
+
+        </main>
+
+        {% include partials/footer %}
+
+    </body>
+
+</html>

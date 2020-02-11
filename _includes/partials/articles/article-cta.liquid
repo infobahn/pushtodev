@@ -1,0 +1,17 @@
+{% if article.post %}
+    {% assign cta_link = '<a href="{{ article.post }}" target="_blank">this post</a>' %}
+{% else %}
+    {% assign cta_link = 'this post' %}
+{% endif %}
+
+<div class="article-cta">
+
+    <h2 class="h3 article-cta__title">If you enjoyed this, there's a number of things you can do:</h2>
+
+    <!--<p>For more of this kind of thing, subscribe to the RSS feed.</p>-->
+
+    <p>Send questions or comments to <a href="mailto:hello@pushtodev.com">hello@pushtodev.com</a>.</p>
+
+    <p>And if you're feeling particularly generous, please like, retweet or share {{ cta_link }} on Twitter. It really helps me out.</p>
+
+</div>

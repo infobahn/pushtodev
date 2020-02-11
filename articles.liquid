@@ -1,0 +1,93 @@
+---
+title: Articles
+layout: layout.liquid
+---
+
+<section class="sub-page__section">
+
+    <h1 class="sub-page__title">{{ title }}</h1>
+
+    <ul class="o-list--inline articles-list">
+    
+        {%- for article in collections.article -%}
+
+            <li class="articles-list__item">
+
+                <article class="articles-list__article">
+
+                    <a class="h3 articles-list__title" href="{{ article.url }}">{{ article.data.title }}</a>
+                    <time class="articles-list__datetime" datetime="{{ article.date | dateUgly }}">{{ article.date } dateUgly }}</time>
+
+                </article>
+
+            </li>
+
+        {%- endfor -%}
+
+    </ul>
+
+    <!-- <ul class="o-list--inline articles-list">
+
+        <li class="articles-list__item">
+
+            <article class="articles-list__article">
+
+                <a class="h3 articles-list__title" href="/articles/weekend-reading/07-02-2020-who-says-rss-is-dead">Weekend Reading: Who says RSS is dead?</a>
+                <time class="articles-list__datetime" datetime="2020-02-07">2020-02-07</time>
+
+            </article>
+
+        </li>
+
+        <li class="articles-list__item">
+
+            <article class="articles-list__article">
+
+                <a class="h3 articles-list__title" href="/articles/events/new-adventures-2020-writeup">New Adventures 2020 writeup</a>
+                <time class="articles-list__datetime" datetime="2020-01-31">2020-01-31</time>
+
+            </article>
+
+        </li>
+
+        <li class="articles-list__item">
+
+            <article class="articles-list__article">
+
+                <a class="h3 articles-list__title" href="/articles/weekend-reading/17-01-2020-new-year-new-series">Weekend Reading: New year, new series</a>
+                <time class="articles-list__datetime" datetime="2020-01-17">2020-01-17</time>
+
+            </article>
+
+        </li>
+    
+        <li class="articles-list__item">
+
+            <article class="articles-list__article">
+            
+                <a class="h3 articles-list__title" href="/articles/design-and-development/pseudo-content-that-makes-sense">Pseudo content that makes sense</a>
+                <time class="articles-list__datetime" datetime="2020-01-14">2020-01-14</time>
+            
+            </article>
+        
+        </li>
+
+    </ul> -->
+
+</section>
+
+<hr>
+
+<section class="contact">
+
+    <h2>Liked this? Why not get in touch?</h2>
+
+    <p>We can give you the freedom to deliver the quality you want to, so why not give us a try? Our services scale easily, so it&rsquo;s easy to start small and take it from there.</p>
+
+    <p class="cta">
+        <span class="cta__text">Email us on</span>
+        <a class="cta__link" href="mailto:hello@pushtodev.com">hello@pushtodev.com</a>
+        <svg class="cta__arrow" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" id="Layer_1" x="0" y="0" version="1.1" viewBox="0 0 95 84.4" xml:space="preserve"><path fill="#ffffff" d="M52.8 84.4L95 42.2 52.8 0 40.5 12.3l21.3 21.2H0v17.4h61.8L40.5 72.1z"/></svg>
+    </p>
+
+</section>
