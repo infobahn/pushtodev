@@ -12,7 +12,10 @@
 
     <nav class="site-header__nav">
 
-        <a class="site-header__nav-link {% if page.url == '/' %}is-current{% endif %}" href="/">Home</a>
+        {% unless page.url == '/' %}
+            <a class="site-header__nav-link {% if page.url == '/' %}is-current{% endif %}" href="/">Push to Dev</a>
+        {% endunless %}
+        
         <a class="site-header__nav-link {% unless page.url == '/' %}is-current{% endunless %}" href="/articles">Articles</a>
         <a class="site-header__nav-link" href="mailto:hello@pushtodev.com">hello@pushtodev.com</a>
         <a class="site-header__nav-link" href="https://twitter.com/pushtodev">@pushtodev.com</a>

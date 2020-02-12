@@ -23,7 +23,7 @@
 
     h2, .h2 {
         font-size: var(--size-h2);
-        margin: 2rem 0 1.25rem;
+        margin: var(--step-2) 0 var(--step--1);
 
         & + span {
             display: inline-block;

@@ -6,8 +6,7 @@
         
     // }
 
-        section,
-        .article {
+        section {
             display: grid;
             grid-template-columns: minmax(var(--space), var(--space-double)) 1fr 1fr minmax(var(--space), var(--space-double));
 

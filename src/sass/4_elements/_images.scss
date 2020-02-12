@@ -10,7 +10,7 @@
 
     figure {
         grid-column: 2 / -2 !important;
-        margin: var(--space-landmark) 0;
+        margin: var(--step-6) 0;
         padding: var(--space-mid) 0;
         border-style: solid;
         border-width: 3px 0;
@@ -21,18 +21,22 @@
         }
     }
 
-        figcaption {
-            grid-column: 2 / span 2 !important;
+        .article > figcaption {
+            grid-column: 2 / span 3;
             align-self: start;
-            width: calc(50% - 5rem);
-            transform: translateX(50%);
-            margin: calc(var(--space-landmark) * -1) 0 0;
+            margin: calc(var(--step-6) * -1) 0 0;
             padding: var(--space);
-            background: rgba(black, 0.075);
+            background-image: linear-gradient(143deg, hsla(324, 5%, 21%, 0.1) 14.29%, transparent 14.29%, transparent 50%, hsla(324, 5%, 21%, 0.1) 50%, hsla(324, 5%, 21%, 0.1) 64.29%, transparent 64.29%, transparent 100%);
+            background-size: 11.63px 8.76px;
             border: 2px solid var(--color-text);
             border-top: 0;
             font-size: var(--size-copy-x-small);
             line-height: var(--line-height-tight);
+
+            @media only screen and (max-width: 1440px) {
+                grid-column: 2 / -2;
+                margin-bottom: var(--step-6);
+            }
 
             > *:first-child {
                 margin-top: 0;
@@ -40,5 +44,9 @@
 
             > *:last-child {
                 margin-bottom: 0;
+            }
+
+            dd {
+                max-width: 50ch;
             }
         }
