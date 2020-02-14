@@ -3,22 +3,19 @@
 //  Styles for sub-pages
 
     .sub-page__title {
-        grid-column: 2 / span 2;
-        margin: 3rem 0 7rem;
-        font-size: 120px;
+        grid-column: 3 / -5;
+        margin: var(--step-0) 0 var(--step-9);
         line-height: 1.15;
 
-        @media only screen and (min-width: 769px) {
-            grid-column: 2 / span 4;
+        @media only screen and (max-width: 1400px) {
+            grid-column: 3 / -3;
+            grid-row: 1;
         }
 
-        @media only screen and (max-width: 768px) {
-            font-size: 70px;
-            margin: 3rem 0 3rem;
+        @media only screen and (max-width: 1090px) {
+            grid-column: 2 / -2;
+            margin: var(--step-9) 0 var(--step-6);
+            color: var(--color-white);
+            z-index: 1;
         }
-
-        @media only screen and (max-width: 468px) {
-            font-size: var(--size-h1);
-            margin: 3rem 0 3rem;
-        }        
     }

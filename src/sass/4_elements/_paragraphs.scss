@@ -55,10 +55,10 @@
                 padding-top: var(--step-0);
                 border-top: 2px solid var(--color-text);
 
-                &:before {
-                    content: "'  ";
-                    margin-left: -0.5ch;
-                }
+                // &:before {
+                //     content: "'  ";
+                //     margin-left: -0.5ch;
+                // }
             }
 
             > *:nth-last-child(2) {

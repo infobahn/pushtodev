@@ -3,49 +3,17 @@
 // ----------------------------------------------------------------------------
 
     :root {
-    //  Font families
+    //  Font famili es
         --copy-font:                aktiv-grotesk, Helvetica, Arial, sans-serif;
         --heading-font:             aktiv-grotesk, Helvetica, Arial, sans-serif;
-        --code-font:                "IBM Plex Mono", Consolas, Monaco, mono;
-
-    // //  Font sizes
-    //     --size-copy-xx-small:       22px;
-    //     --size-copy-x-small:        22px;
-    //     --size-copy-small:          22px;
-    //     --size-copy-base:           22px;
-    //     --size-copy-large:          22px;
-    //     --size-copy-x-large:        22px;
+        --code-font:                "JetBrains Mono", "IBM Plex Mono", Consolas, Monaco, mono;
 
     //  Font weights
         --weight-normal:            300;
         --weight-bold:              500;
 
-    // //  Heading sizes
-    //     --size-h6:                  22px;
-    //     --size-h5:                  22px;
-    //     --size-h4:                  22px;
-    //     --size-h3:                  22px;
-    //     --size-h2:                  22px;
-    //     --size-h1:                  22px;
-
-    // @media only screen and (max-width: 468px) {
-    //     --size-copy-xx-small:       17px;
-    //     --size-copy-x-small:        17px;
-    //     --size-copy-small:          17px;
-    //     --size-copy-base:           17px;
-    //     --size-copy-large:          17px;
-    //     --size-copy-x-large:        17px;
-
-    //     --size-h6:                  17px;
-    //     --size-h5:                  17px;
-    //     --size-h4:                  17px;
-    //     --size-h3:                  17px;
-    //     --size-h2:                  17px;
-    //     --size-h1:                  17px;
-    // }
-
     //  Line heights
-        --line-height-tight:        1.5;
+        --line-height-tight:        1.25;
         --line-height-base:         1.75;
         --line-height-loose:        1.85;
 

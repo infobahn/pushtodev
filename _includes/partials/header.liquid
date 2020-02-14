@@ -12,11 +12,12 @@
 
     <nav class="site-header__nav">
 
-        {% unless page.url == '/' %}
-            <a class="site-header__nav-link {% if page.url == '/' %}is-current{% endif %}" href="/">Push to Dev</a>
-        {% endunless %}
+        <a class="site-header__nav-link {% if page.url == '/' %}is-current{% endif %}" href="/">Push to Dev</a>
+        <ul class="o-list--inline">
+            <li><a class="site-header__nav-link {% if page.url contains '/articles' %}is-current{% endif %}" href="/articles">Articles</a></li>
+            <li><a class="site-header__nav-link" href="#contact">Contact</a></li>
+        </ul>
         
-        <a class="site-header__nav-link {% unless page.url == '/' %}is-current{% endunless %}" href="/articles">Articles</a>
         <a class="site-header__nav-link" href="mailto:hello@pushtodev.com">hello@pushtodev.com</a>
         <a class="site-header__nav-link" href="https://twitter.com/pushtodev">@pushtodev.com</a>
 

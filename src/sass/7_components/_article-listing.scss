@@ -3,9 +3,13 @@
 //  Styles for the article listing page
 
     .articles-list {
-        grid-column: 2 / -3;
+        grid-column: 3 / -5;
 
-        @media only screen and (max-width: 1440px) {
+        @media only screen and (max-width: 1400px) {
+            grid-column: 3 / -3;
+        }
+
+        @media only screen and (max-width: 1090px) {
             grid-column: 2 / -2;
         }
     }
