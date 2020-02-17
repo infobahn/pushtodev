@@ -21,14 +21,14 @@
 {% endif %}
 
 {% if share_image != blank %}
-    <meta property="og:image" content="https://www.pushtodev.com/{{ share_image | url }}" />
+    <meta property="og:image" content="https://www.pushtodev.com{{ share_image | url }}" />
 {% endif %}
 
 {% if twitter_image != blank %}
-    <meta name="twitter:image" content="https://www.pushtodev.com/{{ twitter_image | url }}">
+    <meta name="twitter:image" content="https://www.pushtodev.com{{ twitter_image | url }}">
 {% endif %}
 
-<meta property="og:url" content="https://www.pushtodev.com/{{ page.url }}" />
+<meta property="og:url" content="https://www.pushtodev.com{{ page.url }}" />
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@pushtodev">
 <meta name="twitter:creator" content="@pushtodev">
