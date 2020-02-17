@@ -1,6 +1,36 @@
 <title>Push to Dev</title>
-<meta property="og:title" content="Push to Dev" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.pushtodev.com/" />
-<meta property="og:description" content="Push to Dev is a web development studio built for design agencies. We're dedicated to facilitating excellent design on the web." />
-<!-- <meta property="og:image" content="https://www.pushtodev.com/images/p2d.png" /> -->
+
+{% if title != blank %}
+    <meta property="og:title" content="{{ title }}" />
+    <meta name="twitter:title" content="{{ title }}">
+{% else %}
+    <meta property="og:title" content="Push to Dev" />
+{% endif %}
+
+{% if description != blank %}
+    <meta property="og:description" content="{{ description }}" />
+    <meta name="twitter:description" content="{{ description }}">
+{% else %}
+    <meta property="og:description" content="Push to Dev is a web development studio built for design agencies. We're dedicated to facilitating excellent design on the web." />
+{% endif %}
+
+{% if page.url contains 'articles' %}
+    <meta property="og:type" content="article" />
+{% else %}
+    <meta property="og:type" content="website" />
+{% endif %}
+
+{% if share_image != blank %}
+    <meta property="og:image" content="{{ share_image }}" />
+{% endif %}
+
+{% if twitter_image != blank %}
+    <meta name="twitter:image" content="{{ twitter_image }}">
+{% endif %}
+
+<meta property="og:url" content="{{ page.url }}" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@pushtodev">
+<meta name="twitter:creator" content="@pushtodev">
+<meta name="twitter:url" content="{{ page.url }}">
+<meta name="twitter:domain" content="http://www.pushtodev.com">
