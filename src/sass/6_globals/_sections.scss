@@ -8,29 +8,22 @@
 
         .section {
             display: grid;
-            grid-template-columns: minmax(var(--space), var(--space-double)) 1fr 1fr minmax(var(--space), var(--space-double));
+            grid-template-columns: minmax(var(--step-0), var(--step-9)) repeat(12, minmax(0, 1fr)) minmax(var(--step-0), var(--step-9));
+            margin-top: var(--step-7);
 
-            @media only screen and (min-width: 768px) {
-                grid-template-columns: minmax(var(--space), 0.5fr) 1fr 1fr 1fr 1fr minmax(var(--space), 0.5fr);
-            }
-
-            @media only screen and (min-width: 900px) {
-                column-gap: 2.5rem;
-            }
-
-            @media only screen and (min-width: 1510px) {
-                column-gap: 5rem;
+            @media only screen and (max-width: 1090px) {
+                margin-top: var(--step-4);
             }
 
             > * {
-                grid-column: 2 / span 2;
-                
-                @media only screen and (min-width: 768px) {
-                    grid-column: 3 / span 3;
+                grid-column: span 5 / -4;
+
+                @media only screen and (max-width: 1400px) {
+                    grid-column: span 7 / -3;
                 }
-                
-                @media only screen and (min-width: 1510px) {
-                    grid-column: 4 / span 2;
+
+                @media only screen and (max-width: 1090px) {
+                    grid-column: 2 / -2;
                 }
             }
         }

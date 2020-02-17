@@ -2,50 +2,57 @@
 
     .site-footer {
         display: grid;
-        grid-template-columns: minmax(var(--space),var(--space-double)) 1fr 1fr minmax(var(--space),var(--space-double));
+        grid-template-columns: minmax(var(--step-0), var(--step-9)) repeat(12, minmax(0, 1fr)) minmax(var(--step-0), var(--step-9));
+        margin-top: var(--step-9);
         padding-bottom: var(--space-double);
         font-size: var(--size-copy-x-small);
-        text-align: center;
-        margin-top: var(--space-landmark);
 
-        @media only screen and (min-width: 768px) {
-            grid-template-columns: var(--space-landmark) 1fr 1fr 1fr 1fr var(--space-landmark);
-            margin-top: 20rem;
-            column-gap: 5rem;
-            text-align: left;
+        > * {
+            grid-row: 1;
         }
-
     }
         
     .site-footer__legal {
         display: block;
-        grid-column: 2 / span 2;
+        grid-column: 2 / span 4;
         margin-bottom: var(--space-mid);
         color: var(--color-white);
-        font-size: var(--size-copy-xx-small);
-    }
 
-    .site-footer__links {
-        grid-column: 2 / span 2;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        @media only screen and (max-width: 1400px) {
+            grid-column: 2 / span 3;
+        }
 
-        @media only screen and (min-width: 768px) {
-            grid-column: 4 / span 2;
-            grid-template-columns: 1fr 1fr 5rem 2fr;
+        @media only screen and (max-width: 1090px) {
+            grid-column: 2 / -2;
+            text-align: center;
         }
     }
 
     .site-footer__link {
+        grid-column: 7 / span 2;
         display: block;
         margin-bottom: var(--space-threequarter);
         border: 0;
 
-        @media only screen and (min-width: 768px) {
-            grid-column: 2 / span 1;
+        & + a {
+            grid-column: span 2 / -4;
+            justify-self: end;
+        }
+
+        @media only screen and (max-width: 1400px) {
+            grid-column: 6 / span 2;
 
             & + a {
-                grid-column: 4 / span 1;
+                grid-column: span 2 / -3;
+            }
+        }
+
+        @media only screen and (max-width: 1090px) {
+            grid-column: 2 / -2;
+            grid-row: 2;
+
+            & + a {
+                grid-column: span 2 / -2;
             }
         }
     }
