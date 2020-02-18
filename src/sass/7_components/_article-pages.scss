@@ -23,10 +23,11 @@
 
         & > p:first-of-type {
             grid-row: 2 / span 1;
+            margin-top: 0.45rem;
+            margin-bottom: 1.25em;
             font-size: var(--size-copy-large);
             font-weight: var(--weight-bold);
             line-height: var(--line-height-loose);
-            margin-bottom: 1.25em;
 
             @media only screen and (max-width: 1090px) {
                 grid-column: 2 / -2;

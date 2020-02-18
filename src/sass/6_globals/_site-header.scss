@@ -1,13 +1,10 @@
 //  Site Header
 
-
     .site-header {
-        display: grid;
-        grid-template-columns: minmax(var(--step-0), var(--step-9)) repeat(12, minmax(0, 1fr)) minmax(var(--step-0), var(--step-9));
         margin-bottom: var(--step-9);
 
         @media only screen and (max-width: 1090px) {
-            margin-top: var(--step-4);
+            margin-bottom: 0;
         }
 
         > * {
@@ -30,8 +27,6 @@
 
     .site-header__nav {
         grid-column: 1 / -1;
-        display: grid;
-        grid-template-columns: minmax(var(--step-0), var(--step-9)) repeat(12, minmax(0, 1fr)) minmax(var(--step-0), var(--step-9));
         grid-row: 1 / span 1;
         margin-top: var(--step-4);
 
@@ -61,7 +56,7 @@
                 }
 
                 @media only screen and (max-width: 1090px) {
-                    grid-column: span 5 / -2;
+                    grid-column: span 7 / -2;
                     justify-self: end;
                 }
             }
@@ -94,6 +89,10 @@
             display: inline-block;
             height: 100%;
             margin-right: var(--step--2);
+        }
+
+        ul li:last-child a {
+            margin-right: 0;
         }
     }
 

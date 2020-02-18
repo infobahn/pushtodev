@@ -2,7 +2,7 @@
 // 
 //  Styles for sub-pages
 
-    .sub-page__title {
+    .page__title {
         grid-column: 3 / -5;
         margin: var(--step-0) 0 var(--step-9);
         line-height: 1.15;
@@ -15,7 +15,6 @@
         @media only screen and (max-width: 1090px) {
             grid-column: 2 / -2;
             margin: var(--step-9) 0 var(--step-6);
-            color: var(--color-white);
             z-index: 1;
         }
     }

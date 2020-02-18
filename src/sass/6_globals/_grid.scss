@@ -1,32 +1,6 @@
 //  Grid
 
-    .grid {
+    .o-grid {
         display: grid;
-        grid-template-columns: 
-        [outer-start]
-            minmax(var(--space-threequarter), 1fr)
-            [sidebar-start]
-            13fr
-            [main-end]
-            minmax(var(--space-threequarter), 1fr)
-        [outer-end];
-        overflow-x: hidden;
-
-        @media only screen and (min-width: 768px) {
-            grid-template-rows: 
-                minmax(var(--space-double), 25vh)
-                [title-start]
-                auto
-                [title-end]
-                var(--space)
-                var(--space-double)
-                [main-start]
-                200px
-                1fr
-                [main-end]
-                auto
-                minmax(var(--space-double), 25vh)
-                auto
-                minmax(var(--space-double), auto);
-        }
+        grid-template-columns: minmax(var(--step--1), var(--step-5)) repeat(12, minmax(0, 1fr)) minmax(var(--step--1), var(--step-5));
     }
