@@ -1,12 +1,12 @@
 <div style="background-image: url('{{ image }}');" class="article__hero"></div>
 
-<h1 class="page__title">{{ title }}</h1>
+<h1 class="page__title article__title">{{ title }}</h1>
 
 <span class="article__meta">
 
     <time class="article__datetime" datetime="{{ date | dateUgly }}">{{ date | datePretty }}</time>
 
-    <span class="article__author">By <a href="https://twitter.com/{{ author_twitter }}" target="_blank">{{ author }}</a></span>
+    <span class="article__author">By <a href="https://twitter.com/{{ author_twitter }}" >{{ author }}</a></span>
 
 </span>
 

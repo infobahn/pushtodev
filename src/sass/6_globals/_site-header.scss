@@ -63,9 +63,13 @@
 
             &:nth-child(3),
             &:nth-child(4) {
-                grid-column: span 2 / 14;
+                grid-column: span 2 / 12;
                 justify-self: end;
                 text-align: right;
+
+                @media only screen and (max-width: 1400px) {
+                    grid-column: span 2 / 13;
+                }
 
                 @media only screen and (max-width: 1090px) {
                     display: none;

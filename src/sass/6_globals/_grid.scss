@@ -2,5 +2,5 @@
 
     .o-grid {
         display: grid;
-        grid-template-columns: minmax(var(--step--1), var(--step-5)) repeat(12, minmax(0, 1fr)) minmax(var(--step--1), var(--step-5));
+        grid-template-columns: minmax(0, 0.5fr) repeat(12, minmax(0, 1fr)) minmax(0, 0.5fr);
     }
