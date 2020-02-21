@@ -4,4 +4,15 @@
 //
 // Styleguide Version number\
 
-    
+    button {
+        display: inline-block;
+        margin: var(--space) 0 0;
+        padding: var(--space-threequarter) var(--space-mid);
+        border: 0;
+        background: var(--color-pink);
+        color: var(--color-white);
+        font-size: var(--size-copy-x-small);
+        font-weight: var(--weight-bold);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }

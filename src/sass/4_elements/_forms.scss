@@ -4,4 +4,51 @@
 //
 // Styleguide Base.Forms
 
-    
+    form {
+        margin: var(--space-landmark) calc(var(--space-mid) * -1) 0;
+        padding: var(--space-mid);
+        border: 1px solid var(--color-text);
+        background-image: linear-gradient(143deg, hsla(324, 5%, 21%, 0.1) 14.29%, transparent 14.29%, transparent 50%, hsla(324, 5%, 21%, 0.1) 50%, hsla(324, 5%, 21%, 0.1) 64.29%, transparent 64.29%, transparent 100%);
+        background-size: 11.63px 8.76px;
+    }
+
+        label {
+            display: block;
+            font-size: var(--size-copy-x-small);
+            font-weight: var(--weight-bold);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        input,
+        textarea {
+            display: block;
+            width: 100%;
+            margin: var(--space-quarter) 0 var(--step-0);
+            padding: var(--space-half) var(--space-threequarter);
+            border: 2px solid transparent;
+            background: var(--color-green);
+            color: var(--color-subtext);
+            font-size: var(--size-copy-small);
+            font-weight: var(--weight-bold);
+
+            &:focus {
+                border-color: var(--color-white);
+                color: var(--color-white);
+            }
+
+            &:invalid {
+                border-color: var(--color-pink);
+                background: hsla(343, 87%, 59%, 0.2);
+                color: var(--color-white);
+                box-shadow: none;
+            }
+        }
+
+        input {
+
+        }
+
+        textarea {
+
+        }

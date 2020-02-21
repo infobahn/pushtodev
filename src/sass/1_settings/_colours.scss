@@ -7,10 +7,10 @@
         --color-black:                  #000;
 
         // Brand colours
-        --color-pink:                   hsl(343, 87%, 59%);
+        --color-pink:                   hsl(346, 84%, 61%);
         --color-green:                  hsl(173, 66%, 43%);
         --color-green-dk:               hsl(173, 66%, 27%);
-        --color-blue:                   hsl(229, 53%, 23%);
+        --color-blue:                   hsl(208, 53%, 32%);
         --color-yellow:                 hsl(38, 92%, 60%);
 
         // Colour uses
@@ -19,7 +19,7 @@
 
         --color-headings:               hsl(324, 5%, 21%);
         --color-text:                   hsl(324, 5%, 21%);
-        --color-subtext:                var(--color-white);
+        --color-subtext:                hsl(173, 36%, 27%);
 
         --color-link:                   var(--color-text);
         --color-link-visited:           var(--color-text);
@@ -28,8 +28,8 @@
         --color-link-active:            var(--color-text);
 
         // @media (prefers-color-scheme: dark) {
-        //   --color-body:                   var(--color-green-dk);
-        //   --color-headings:               var(--color-white);
-        //   --color-text:                   var(--color-white);
+        //   --color-body:                   hsl(188, 56%, 23%);
+        //   --color-headings:               hsl(173, 26%, 83%);
+        //   --color-text:                   hsl(173, 26%, 83%);
         // }
     }
